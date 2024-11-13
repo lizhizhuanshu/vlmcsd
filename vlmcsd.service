@@ -1,0 +1,12 @@
+[Unit]
+Description=KMS Emulator
+After=network.target
+
+[Service]
+Type=simple
+User=root
+ExecStart=/usr/local/bin/vlmcsd -D
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
